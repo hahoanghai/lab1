@@ -9,7 +9,7 @@
 
 	echo "<br/>";
 
-	$hoursworked = 10;
+	$hoursworked = $_GET['hours'];
 	$rate = 12;
 	if($hoursworked > 40)
 		$total = $hoursworked * $rate * 1.5;
