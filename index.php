@@ -22,6 +22,7 @@
 		}
 
 		function winner($token) {
+			//Check diagonal
 			if (($this->position[0] == $token) && ($this->position[4] == $token) && ($this->position[8] == $token)) {
 				return true;
 			}
@@ -29,6 +30,7 @@
 				return true;
 			}
 
+			//Check horizontal
 			for($row=0; $row<3; $row++) {
 				$result = true;
 				for($col=0; $col<3; $col++){
@@ -38,6 +40,8 @@
 				if($result)
 					return $result;
 			}
+
+			//Check vertical
 			for($row=0; $row<3; $row++) {
 				$result = true;
 				for($col=0; $col<3; $col++){
