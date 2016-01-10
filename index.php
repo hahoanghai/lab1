@@ -22,6 +22,13 @@
 		}
 
 		function winner($token) {
+			if (($this->position[0] == $token) && ($this->position[4] == $token) && ($this->position[8] == $token)) {
+				return true;
+			}
+			if (($this->position[2] == $token) && ($this->position[4] == $token) && ($this->position[6] == $token)) {
+				return true;
+			}
+
 			for($row=0; $row<3; $row++) {
 				$result = true;
 				for($col=0; $col<3; $col++){
